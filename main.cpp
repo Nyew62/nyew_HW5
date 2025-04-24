@@ -11,7 +11,29 @@
 *************************************************************************/
 
 #include <iostream>
+#include <fstream>
+#include <sstream>
+#include <queue>
+#include <deque>
+#include "MyList.h"
+using namespace std;
 
+struct Profile{
+    string fulln;
+    string state;
+
+    bool operator==(Profile r){
+        return fulln==r.fulln;
+    }
+    bool operator!=(Profile r){
+        return fulln != r.fulln;
+    }
+};
+ostream& operator<<(ostream& out, Profile& user){
+    out << user.fulln << "---" << user.state;
+    return out;
+}
+ bool searchDeque(deque<Profile>& pq, Profile&)
 
 int main() {
 
