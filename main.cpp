@@ -42,7 +42,7 @@ deque<Profile> pdeque;
 Profile temp;
 string line;
 
-ifstream file("presidentsWstates");
+ifstream file("presidentsWstates.txt");
 if (file.is_open()){
     while(getline(file,line)){
         stringstream ss(line);
@@ -59,7 +59,7 @@ if (file.is_open()){
 }
 
 cout << "List: "<<endl;
-pMyList.display();
+
 
 
 cout << "Queue: "<< endl;
@@ -73,7 +73,7 @@ for (deque<Profile>::iterator dIte=pdeque.begin(); dIte!=pdeque.end();dIte++){
     cout<<*dIte<<endl;
 }
 
-for (size_t i=0; i<pdeque.size(); i++){
+for (int i=0; i<pdeque.size(); i++){
     cout << pdeque[i]<<endl;
 
     temp.fulln="John Tyler";
