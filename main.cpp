@@ -16,6 +16,7 @@
 #include <queue>
 #include <deque>
 #include "MyList.h"
+
 using namespace std;
 
 struct Profile{
@@ -33,7 +34,9 @@ ostream& operator<<(ostream& out, Profile& user){
     out << user.fulln << "---" << user.state;
     return out;
 }
- bool searchDeque(deque<Profile>& pq, Profile&);
+
+
+bool searchDeque(deque<Profile>& pq, Profile&);
 
 int main() {
 MyList<Profile> pMyList;
@@ -77,13 +80,15 @@ for (int i=0; i<pdeque.size(); i++){
     cout << pdeque[i]<<endl;
 
     temp.fulln="John Tyler";
-    if(searchDeque(pdeque,temp)){
+
+}
+
+if(searchDeque(pdeque,temp)){
         cout <<"found: "<<temp<<endl;
     }
     else{
         cout <<"name not found: "<<temp<<endl;
     }
-}
 return 0;
 
 
